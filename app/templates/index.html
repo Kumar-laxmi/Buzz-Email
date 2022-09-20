@@ -15,62 +15,54 @@
     <link href="img/favicon.ico" rel="icon">
     -->
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- Font-Awesome Stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <!-- Local CSS File -->
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" crossorigin="anonymous">
 
 </head>
 
+
 <body>
-    <div class="container-fluid py-5 bg-black">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                <div class="card bg-white text-black" style="border-radius: 1rem;">
-                    <div class="card-body p-5 text-center">
-    
-                        <div class="mb-md-5 mt-md-4 pb-5">
-    
-                            <h2 class="fw-bold mb-2 text-uppercase">Buzz Email</h2>
-                            <p class="text-black-50 mb-5">Please enter email ids & message</p>
-    
-                            <div class="form-outline form-white mb-4">
-                                  <div class="form-group">    
-                                    <label class="form-label" for="typeEmailX">Email</label>
-                                  <div class="input-group input-group-md">
-                                    <input type="text" id="example_emailBS" name="example_emailBS" class="form-control" value='["damian.raffa@mobileum.com","user@mobileum.com"]'>
-                                    <span class="input-group-btn">
-                                      <button class="btn red" type="button"><i class="fa fa-calendar-plus-o"></i></button>
-                                    </span>
-                                  </div>
-                                </div>
-                            </div>
-    
-                            <div class="form-outline form-white mb-4">
-                                <label class="form-label" for="typePasswordX">Message</label>
-                                <textarea id="typePasswordX" class="form-control" rows="4"></textarea>
-                            </div>
-    
-                            <button class="btn btn-outline-dark btn-lg px-5" type="submit">Send</button>
-    
-                        </div>
-                        <div>
-                            <p class="mb-0">Designed and created by <a href="#!" class="text-black-50 fw-bold">Kumar Laxmikant</a>
-                            </p>
-                        </div>
-    
+    <div class="container">
+        <div class="card bg-white text-black" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+
+                <div class="mb-md-5 mt-md-4 pb-5">
+
+                    <h2 class="fw-bold mb-2 text-uppercase">Buzz Email</h2>
+                    <p class="text-black-50 mb-5">Please enter email ids & message</p>
+
+                    <div class="form-outline mb-4 multiple-val-input">
+                        <label class="form-label" for="typeEmailX">Email</label>
+                        <input type="text" name="tags" class="form-control" value="" data-role="tagsinput" />
                     </div>
+
+                    <br/><br/>
+
+                    <div class="form-outline form-white mb-4">
+                        <label class="form-label" for="typePasswordX">Message</label>
+                        <textarea id="typePasswordX" class="form-control" rows="4"></textarea>
+                    </div>
+
+                    <br/><br/>
+
+                    <button class="btn btn-dark btn-lg px-5" type="submit">Send</button>
+
                 </div>
+                <div>
+                    <p class="mb-0">Designed and created by <a href="#!" class="text-black-50 fw-bold">Kumar Laxmikant</a>
+                    </p>
+                </div>
+
             </div>
         </div>
     </div>
 
-    <!-- JavaScript code -->
-    <script src="{% static 'js/main.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.js" integrity="sha512-VvWznBcyBJK71YKEKDMpZ0pCVxjNuKwApp4zLF3ul+CiflQi6aIJR+aZCP/qWsoFBA28avL5T5HA+RE+zrGQYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>
