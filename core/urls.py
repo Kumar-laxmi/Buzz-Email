@@ -21,4 +21,5 @@ from app.views import *
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('', index),
+    path('send/<str:emails>/<str:message>', index2),
 ]

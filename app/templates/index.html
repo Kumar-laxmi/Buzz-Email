@@ -37,19 +37,29 @@
 
                     <div class="form-outline mb-4 multiple-val-input">
                         <label class="form-label" for="typeEmailX">Email</label>
-                        <input type="text" name="tags" class="form-control" value="" data-role="tagsinput" />
+                        <input type="text" name="tags" class="form-control" id="emails" value="" data-role="tagsinput" />
                     </div>
 
                     <br/><br/>
 
                     <div class="form-outline form-white mb-4">
                         <label class="form-label" for="typePasswordX">Message</label>
-                        <textarea id="typePasswordX" class="form-control" rows="4"></textarea>
+                        <textarea id="typePasswordX" class="form-control" id="msg" rows="4"></textarea>
                     </div>
 
                     <br/><br/>
 
-                    <button class="btn btn-dark btn-lg px-5" type="submit">Send</button>
+                    <button class="btn btn-dark btn-lg px-5" type="submit" onclick="LoadURL()">Send</button>
+                    <script type="text/javascript">
+                        function LoadURL() {
+                            var ticker = document.getElementById("emails").value;
+                            var days = document.getElementById("msg").value;
+                            var server = window.location.origin;
+                            var path = "/send/" + ticker + "/" + days;
+                            var url = server + path;
+                            window.location.href = url;
+                        }
+                    </script>
 
                 </div>
                 <div>
